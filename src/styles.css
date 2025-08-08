@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-/* Global variables */
-:root {
-  font-size: 16px;
-  --color-primary: #fdecd6;
-  --color-secondary: white;
-  --color-accent: #80b425;
-  --font-title: "Playfair Display", serif;
-  --font-body: "Montserrat", sans-serif;
-}
-
 /* CSS Reset */
 html,
 body,
@@ -135,4 +125,30 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* End of CSS Reset */
+
+/* Global variables */
+:root {
+  font-size: 16px;
+  --color-neutral-1: #f2f0ef;
+  --color-neutral-2: #c2c0a6;
+  --color-1: #053b47;
+  --color-2: #558175;
+  --font-title: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+/* Fix footer position in the bottom */
+html,
+body,
+app-root {
+  height: 100%;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

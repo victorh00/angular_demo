@@ -41,3 +41,48 @@ from zero
 /header
 div: logo, slogan
 div:
+
+.montserrat-<uniquifier> {
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+}
+
+.playfair-display-<uniquifier> {
+font-family: "Playfair Display", serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+}
+
+css units
+Normalmente os browsers especificam o tamanho default da fonte do elemento root (raiz) sendo 16px, então guarde isso no coração!
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem
+18px = 1.125rem
+meio paia
+
+paleta
+
+#042940
+#005C53
+#9FC131
+#DBF227
+#D6D58E
+
+html, body {
+height: 100%;
+margin: 0;
+}
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+main {
+flex: 1;
+}
