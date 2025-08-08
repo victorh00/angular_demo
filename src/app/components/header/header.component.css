@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+.header_logo {
+  height: 3rem;
+}
+.header_title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.header_slogan {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
