@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-neutral-2);
+  background-color: var(--color-dark-0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 .footer_text {
   font-family: var(--font-body);
   font-size: 0.6rem;
-  color: var(--color-2);
+  color: var(--color-1);
   font-weight: 500;
 }
 .footer_logo {

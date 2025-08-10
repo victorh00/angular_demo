@@ -1,24 +1,27 @@
 .header {
-  background-color: var(--color-neutral-2);
+  background-color: var(--color-dark-0);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   gap: 1rem;
 }
 .header_logo {
-  height: 3rem;
+  height: 2rem;
 }
 .header_title {
   font-family: var(--font-title);
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
   color: var(--color-1);
 }
-.header_slogan {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.75rem;
-  color: var(--color-2);
+
+.background {
+  background-color: var(--color-dark-1);
+  position: fixed;       /* Fixa a div na tela */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* 100% da largura da viewport */
+  height: 100vh;         /* 100% da altura da viewport */
+  z-index: -1;
 }

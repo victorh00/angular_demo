@@ -86,3 +86,6 @@ flex-direction: column;
 main {
 flex: 1;
 }
+
+https://m2.material.io/design/color/dark-theme.html#ui-application
+https://www.flaticon.com/icon-fonts-most-downloaded/2

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* CSS Reset */
 html,
@@ -129,12 +130,13 @@ table {
 /* Global variables */
 :root {
   font-size: 16px;
-  --color-neutral-1: #f2f0ef;
-  --color-neutral-2: #c2c0a6;
-  --color-1: #053b47;
-  --color-2: #558175;
-  --font-title: "Playfair Display", serif;
-  --font-body: "Montserrat", sans-serif;
+  --color-dark-0: #121212;
+  --color-dark-1: #303030;
+  --color-1: #bb86fc; 
+  --color-2: #3700b3;
+  --color-neutral-1: #f2f0ef; 
+  --font-title: "Zain", sans-serif;
+  --font-body: "Roboto", sans-serif;
 }
 
 /* Fix footer position in the bottom */
