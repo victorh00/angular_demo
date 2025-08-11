@@ -1,4 +1,4 @@
-.main_container {
+.router_outlet {
     display: flex;
     flex: 1;
 }
