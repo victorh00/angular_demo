@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* CSS Reset */
 html,
@@ -126,15 +126,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body,
+html {
+  height: 100vh;
+}
 
 /* Global variables */
 :root {
   font-size: 16px;
   --color-dark-0: #121212;
   --color-dark-1: #303030;
-  --color-1: #bb86fc; 
+  --color-1: #bb86fc;
   --color-2: #3700b3;
-  --color-neutral-1: #f2f0ef; 
+  --color-neutral-1: #f2f0ef;
   --font-title: "Zain", sans-serif;
   --font-body: "Roboto", sans-serif;
 }
@@ -149,8 +153,5 @@ app-root {
 app-root {
   display: flex;
   flex-direction: column;
-}
-
-main {
-  flex: 1;
+  height: 100vh;
 }

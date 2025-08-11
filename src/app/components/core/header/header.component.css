@@ -4,7 +4,7 @@
   display: block;
   padding: 0.7rem 1rem;
 }
-.header_logo_container{
+.header_logo_container {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -42,9 +42,9 @@
   background-color: var(--color-dark-0);
 }
 a {
-    color: var(--color-neutral-1);
-    text-decoration: none;
-    font-family: var(--font-body);
+  color: var(--color-neutral-1);
+  text-decoration: none;
+  font-family: var(--font-body);
 }
 li {
   padding: 0.3rem;
@@ -57,13 +57,4 @@ li {
 }
 .link_icon {
   height: 1rem;
-}
-.background {
-  background-color: var(--color-dark-1);
-  position: fixed;       /* Fixa a div na tela */
-  top: 0;
-  left: 0;
-  width: 100vw;          /* 100% da largura da viewport */
-  height: 100vh;         /* 100% da altura da viewport */
-  z-index: -1;
 }
