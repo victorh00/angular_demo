@@ -1,9 +1,12 @@
 .header {
   background-color: var(--color-dark-0);
+  position: relative;
+  display: block;
+  padding: 0.7rem 1rem;
+}
+.header_logo_container{
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0.7rem 1rem;
   gap: 1rem;
 }
 .header_logo {
@@ -15,7 +18,37 @@
   font-size: 1.5rem;
   color: var(--color-1);
 }
-
+.header_menu_icon {
+  height: 1.5rem;
+  padding: 0.5rem;
+}
+.header_menu {
+  position: absolute;
+  top: 0.5rem;
+  right: 3rem;
+}
+.menu_checkbox {
+  display: none; /* esconde a checkbox */
+}
+.menu_checkbox:checked ~ .menu_list {
+  display: inline-block;
+}
+.menu_list {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  text-align: right;
+  background-color: var(--color-dark-0);
+}
+a {
+    color: var(--color-neutral-1);
+    text-decoration: none;
+    font-family: var(--font-body);
+}
+li {
+  padding: 0.3rem;
+}
 .background {
   background-color: var(--color-dark-1);
   position: fixed;       /* Fixa a div na tela */

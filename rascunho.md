@@ -89,3 +89,7 @@ flex: 1;
 
 https://m2.material.io/design/color/dark-theme.html#ui-application
 https://www.flaticon.com/icon-fonts-most-downloaded/2
+https://codepen.io/JFarrow/pen/nJgRga
+https://medium.com/@mateus2050/hamburguer-menu-html-and-css-only-c06364fa9bfdx'
+https://www.youtube.com/watch?v=BwXFgcEfg-Y
+https://m2.material.io/design/color/dark-theme.html#ui-application
