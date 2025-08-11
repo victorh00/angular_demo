@@ -1,19 +1,49 @@
-<form action="">
-  <label for="conteudo">texto</label>
-  <input
-    type="text"
-    id="conteudo"
-    name="conteudo"
-    placeholder="digite o texto"
-    class="input"
-  />
-  <label for="autor">autor</label>
-  <input
-    type="text"
-    id="autor"
-    name="autor"
-    placeholder="digite o autor"
-    class="input"
-  />
-</form>
-<a routerLink="/memoteca/painel">Voltar para o painel</a>
+<section class="criar_section">
+  <div class="content_wrap">
+    <div class="form_wrap">
+      <header>
+        <h2>criar anotação</h2>
+      </header>
+      <form action="">
+        <label for="conteudo">texto</label>
+        <input
+          type="text"
+          id="conteudo"
+          name="conteudo"
+          placeholder="digite o texto"
+          class="text_input"
+        />
+        <label for="autor">autor</label>
+        <input
+          type="text"
+          id="autor"
+          name="autor"
+          placeholder="digite o autor"
+          class="text_input"
+        />
+        <label for="modelo">modelo</label>
+
+        <div class="form_buttons_wrap">
+          <a routerLink="/memoteca/painel">Voltar para o painel</a>
+        </div>
+      </form>
+    </div>
+    <div class="preview_wrap">
+      <img
+        class="preview_img"
+        src="../../../../../assets/img/bank_w.png"
+        alt="preview_img"
+      />
+      <img
+        class="preview_img"
+        src="../../../../../assets/img/bank_w.png"
+        alt="preview_img"
+      />
+      <img
+        class="preview_img"
+        src="../../../../../assets/img/bank_w.png"
+        alt="placeholder"
+      />
+    </div>
+  </div>
+</section>
