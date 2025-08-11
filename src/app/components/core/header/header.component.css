@@ -49,6 +49,15 @@ a {
 li {
   padding: 0.3rem;
 }
+.link_wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+.link_icon {
+  height: 1rem;
+}
 .background {
   background-color: var(--color-dark-1);
   position: fixed;       /* Fixa a div na tela */
