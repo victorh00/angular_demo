@@ -5,45 +5,48 @@
         <h2>criar anotação</h2>
       </header>
       <form action="">
-        <label for="conteudo">texto</label>
-        <input
-          type="text"
-          id="conteudo"
-          name="conteudo"
-          placeholder="digite o texto"
-          class="text_input"
-        />
         <label for="autor">autor</label>
-        <input
-          type="text"
-          id="autor"
-          name="autor"
-          placeholder="digite o autor"
-          class="text_input"
-        />
-        <label for="modelo">modelo</label>
+        <input type="text" id="autor" name="autor" placeholder="digite o autor" class="text_input" />
+        <label for="conteudo">texto</label>
+        <input type="textarea" id="conteudo" name="conteudo" placeholder="digite o texto" class="text_input" />
+        <label for="modelo">selecione o modelo</label>
+        <div class="3wrap">
+          <div class="1wrap">
+            <label for="modelo1">
+              <input type="radio" id="modelo1" name="modelo-card" value="modelo1">
+              <div class="card card1">
+                <img class="card_icon" src="../../../../../assets/img/bank_w.png" alt="preview_img" />
+                <p>autor</p>
+                <p>texto de exemplo</p>
+              </div>
+            </label>
+          </div>
+          <div class="1wrap">
+            <label for="modelo2">
+              <input type="radio" id="modelo2" name="modelo-card" value="modelo2">
+              <div class="card card2">
+                <img class="card_icon" src="../../../../../assets/img/bank_w.png" alt="preview_img" />
+                <p>autor</p>
+                <p>texto de exemplo</p>
+              </div>
+            </label>
+          </div>
+          <div class="1wrap">
+            <label for="modelo3">
+              <input type="radio" id="modelo3" name="modelo-card" value="modelo3">
+              <div class="card card3">
+                <img class="card_icon" src="../../../../../assets/img/bank_w.png" alt="preview_img" />
+                <p>autor</p>
+                <p>texto de exemplo</p>
+              </div>
+            </label>
+          </div>
+        </div>
 
         <div class="form_buttons_wrap">
           <a routerLink="/memoteca/painel">Voltar para o painel</a>
         </div>
       </form>
-    </div>
-    <div class="preview_wrap">
-      <img
-        class="preview_img"
-        src="../../../../../assets/img/bank_w.png"
-        alt="preview_img"
-      />
-      <img
-        class="preview_img"
-        src="../../../../../assets/img/bank_w.png"
-        alt="preview_img"
-      />
-      <img
-        class="preview_img"
-        src="../../../../../assets/img/bank_w.png"
-        alt="placeholder"
-      />
     </div>
   </div>
 </section>
