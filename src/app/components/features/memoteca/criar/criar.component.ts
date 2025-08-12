@@ -1,11 +1,30 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-criar',
   standalone: true,
-  imports: [RouterLink],
+  imports: [FormsModule, RouterLink],
   templateUrl: './criar.component.html',
   styleUrl: './criar.component.css',
 })
-export class CriarComponent {}
+export class CriarComponent {
+  anotacao = {
+    id: '1',
+    texto: 'texto de exempllo',
+    autor: 'machado',
+    modelo: 'modelo1',
+    data: new Date().toISOString().split('T')[0],
+  };
+  criarAnotacao() {
+    alert('nova anotacao criada');
+  }
+  cancelarAnotacao() {
+    alert('anotação cancelada. campos reiniciados.');
+    this.anotacao.autor = 'machado';
+    this.anotacao.data = new Date().toISOString().split('T')[0];
+    this.anotacao.texto = 'texto de exempllo';
+    this.anotacao.modelo = 'modelo1';
+  }
+}
