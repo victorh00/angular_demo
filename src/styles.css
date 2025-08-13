@@ -136,8 +136,10 @@ html {
   font-size: 16px;
   --color-dark-0: #121212;
   --color-dark-1: #303030;
+  --color-dark-2: #484848;
   --color-1: #bb86fc;
   --color-2: #3700b3;
+  --color-neutral-0: #ffffff;
   --color-neutral-1: #f2f0ef;
   --font-title: "Zain", sans-serif;
   --font-body: "Roboto", sans-serif;

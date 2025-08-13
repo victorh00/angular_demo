@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 export class CriarComponent {
   anotacao = {
     id: '1',
-    texto: 'texto de exempllo',
+    texto: 'texto de exemplo',
     autor: 'machado',
     modelo: 'modelo1',
     data: new Date().toISOString().split('T')[0],
@@ -24,7 +24,7 @@ export class CriarComponent {
     alert('anotação cancelada. campos reiniciados.');
     this.anotacao.autor = 'machado';
     this.anotacao.data = new Date().toISOString().split('T')[0];
-    this.anotacao.texto = 'texto de exempllo';
+    this.anotacao.texto = 'texto de exemplo';
     this.anotacao.modelo = 'modelo1';
   }
 }
