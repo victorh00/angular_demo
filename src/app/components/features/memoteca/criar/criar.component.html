@@ -54,7 +54,6 @@
               </div>
               <div class="col2">
                 <p class="tipo_modelo">lembrete</p>
-
                 <div class="card">
                   <div class="card_row">
                     <img
@@ -128,7 +127,9 @@
           <div class="acoes">
             <button (click)="criarAnotacao()" class="botao">salvar</button>
             <button (click)="cancelarAnotacao()" class="botao">cancelar</button>
-            <button routerLink="/memoteca">painel</button>
+            <button (click)="cancelarAnotacao()" routerLink="/memoteca">
+              painel
+            </button>
           </div>
         </div>
       </div>

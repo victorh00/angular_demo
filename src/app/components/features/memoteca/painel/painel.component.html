@@ -1,4 +1,8 @@
 <section class="painel_section">
-  <p>painel works!</p>
-  <a routerLink="/memoteca/criar">criar anotação</a>
+  <div class="painel">
+    <div class="painel_item" *ngFor="let item of listaAnotacaoes">
+      <app-card [anotacao]="item"></app-card>
+    </div>
+    <a routerLink="/memoteca/criar">criar anotação</a>
+  </div>
 </section>
