@@ -8,10 +8,32 @@
   z-index: -1;
   background-color: var(--color-dark-1);
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .painel {
   padding: 3rem;
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
   gap: 1rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  background-color: var(--color-dark-2);
+  color: var(--color-neutral-1);
+}
+.lista_vazia {
+  font-family: var(--font-body);
+  color: var(--color-1);
+  margin-bottom: 0.5rem;
 }

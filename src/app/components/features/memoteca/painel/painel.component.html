@@ -1,8 +1,17 @@
 <section class="painel_section">
-  <div class="painel">
-    <div class="painel_item" *ngFor="let item of listaAnotacaoes">
-      <app-card [anotacao]="item"></app-card>
+  <div class="content">
+    <div class="painel" *ngIf="listaAnotacoes.length > 0; else listaVazia">
+      <div class="painel_item" *ngFor="let item of listaAnotacoes">
+        <app-card [anotacao]="item"></app-card>
+      </div>
     </div>
-    <a routerLink="/memoteca/criar">criar anotação</a>
+    <div class="botoes">
+      <button routerLink="/memoteca/criar">criar anotação</button>
+    </div>
   </div>
 </section>
+<ng-template #listaVazia>
+  <div class="lista_vazia">
+    <p>não há anotações a serem exibidas!</p>
+  </div>
+</ng-template>

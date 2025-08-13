@@ -1,18 +1,14 @@
+import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [NgClass],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
 export class CardComponent {
-  CardImg = {
-    modelo1: '../../../../../assets/img/notification_b.png',
-    modelo2: '../../../../../assets/img/lamp_b.png',
-    modelo3: '../../../../../assets/img/warning_b.png',
-  };
   /* notação anotacao!: define 'assignment assertion' */
   @Input() anotacao!: {
     id: string;
@@ -21,9 +17,7 @@ export class CardComponent {
     modelo: string;
     data: string;
   };
+  larguraAnotacao(): string {
+    return this.anotacao.texto.length <= 250 ? 'anot_p' : 'anot_g';
+  }
 }
-export const CardImg = {
-  modelo1: '../../../../../assets/img/notification_b.png',
-  modelo2: '../../../../../assets/img/lamp_b.png',
-  modelo3: '../../../../../assets/img/warning_b.png',
-};

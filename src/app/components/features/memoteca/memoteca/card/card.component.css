@@ -25,3 +25,9 @@
 .card_row2 {
   background-color: var(--color-dark-2);
 }
+.anot_p {
+  width: 15rem;
+}
+.anot_g {
+  width: 25rem;
+}

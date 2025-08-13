@@ -84,9 +84,6 @@ h2 {
 .card_row2 {
   background-color: var(--color-dark-2);
 }
-.col2 {
-  max-width: 15rem;
-}
 .acoes {
   padding: 1.5rem 8rem;
   display: flex;
