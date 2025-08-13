@@ -90,11 +90,16 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 .acoes button {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-family: var(--font-body);
   background-color: var(--color-dark-2);
   color: var(--color-neutral-1);
+}
+.anot_p {
+  width: 10rem;
+}
+.anot_g {
+  width: 20rem;
 }

@@ -18,6 +18,6 @@ export class CardComponent {
     data: string;
   };
   larguraAnotacao(): string {
-    return this.anotacao.texto.length <= 250 ? 'anot_p' : 'anot_g';
+    return this.anotacao.texto.length <= 50 ? 'anot_p' : 'anot_g';
   }
 }
