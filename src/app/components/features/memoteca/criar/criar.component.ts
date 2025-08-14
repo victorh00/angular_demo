@@ -1,8 +1,9 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Anotacao } from '../anotacao';
+import { DatabaseService } from '../painel/database.service';
 
 @Component({
   selector: 'app-criar',
@@ -12,24 +13,29 @@ import { Anotacao } from '../anotacao';
   styleUrl: './criar.component.css',
 })
 export class CriarComponent {
-  anotacao: Anotacao = {
-    id: '1',
-    texto: 'texto de exemplo',
-    autor: 'machado',
-    modelo: 'modelo1',
+  constructor(private dbService: DatabaseService, private router: Router) {}
+  novaAnotacao: Anotacao = {
+    texto:
+      'sendo impossível entendê-lo, sei que se eu o entender é porque estou errando.',
+    autor: 'clarice lispector',
+    modelo: 'modelo2',
     data: new Date().toISOString().split('T')[0],
   };
   criarAnotacao() {
-    alert('nova anotacao criada');
+    this.dbService.create(this.novaAnotacao).subscribe(() => {
+      alert('nova anotacao criada!');
+      this.router.navigate(['/memoteca']);
+    });
   }
   cancelarAnotacao() {
     alert('anotação cancelada. campos reiniciados.');
-    this.anotacao.autor = 'machado';
-    this.anotacao.data = new Date().toISOString().split('T')[0];
-    this.anotacao.texto = 'texto de exemplo';
-    this.anotacao.modelo = 'modelo1';
+    this.novaAnotacao.autor = 'clarice lispector';
+    this.novaAnotacao.data = new Date().toISOString().split('T')[0];
+    this.novaAnotacao.texto =
+      'sendo impossível entendê-lo, sei que se eu o entender é porque estou errando.';
+    this.novaAnotacao.modelo = 'modelo2';
   }
   larguraAnotacao(): string {
-    return this.anotacao.texto.length <= 50 ? 'anot_p' : 'anot_g';
+    return this.novaAnotacao.texto.length <= 50 ? 'anot_p' : 'anot_g';
   }
 }

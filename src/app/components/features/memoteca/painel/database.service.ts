@@ -20,4 +20,8 @@ export class DatabaseService {
   read(): Observable<Anotacao[]> {
     return this.http.get<Anotacao[]>(this.API);
   }
+
+  create(anotacao: Anotacao): Observable<Anotacao> {
+    return this.http.post<Anotacao>(this.API, anotacao);
+  }
 }

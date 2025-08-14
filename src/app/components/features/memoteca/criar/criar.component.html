@@ -11,7 +11,7 @@
             type="text"
             id="autor"
             name="autor"
-            [(ngModel)]="anotacao.autor"
+            [(ngModel)]="novaAnotacao.autor"
           />
         </div>
 
@@ -23,7 +23,7 @@
             type="text"
             id="texto"
             name="texto"
-            [(ngModel)]="anotacao.texto"
+            [(ngModel)]="novaAnotacao.texto"
           />
         </div>
 
@@ -34,7 +34,7 @@
             type="date"
             id="data"
             name="data"
-            [(ngModel)]="anotacao.data"
+            [(ngModel)]="novaAnotacao.data"
           />
         </div>
 
@@ -49,7 +49,7 @@
                   name="modelo"
                   id="modelo1"
                   value="modelo1"
-                  [(ngModel)]="anotacao.modelo"
+                  [(ngModel)]="novaAnotacao.modelo"
                 />
               </div>
               <div class="col2">
@@ -57,11 +57,11 @@
                 <div class="card">
                   <div class="card_row" [ngClass]="larguraAnotacao()">
                     <img src="../../../../../assets/img/modelo1.png" alt="" />
-                    <p>{{ anotacao.texto }}</p>
+                    <p>{{ novaAnotacao.texto }}</p>
                   </div>
                   <div class="card_row card_row2">
-                    <p>{{ anotacao.autor }}</p>
-                    <p>{{ anotacao.data }}</p>
+                    <p>{{ novaAnotacao.autor }}</p>
+                    <p>{{ novaAnotacao.data }}</p>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@
                   name="modelo"
                   id="modelo2"
                   value="modelo2"
-                  [(ngModel)]="anotacao.modelo"
+                  [(ngModel)]="novaAnotacao.modelo"
                 />
               </div>
 
@@ -83,11 +83,11 @@
                 <div class="card">
                   <div class="card_row" [ngClass]="larguraAnotacao()">
                     <img src="../../../../../assets/img/modelo2.png" alt="" />
-                    <p>{{ anotacao.texto }}</p>
+                    <p>{{ novaAnotacao.texto }}</p>
                   </div>
                   <div class="card_row card_row2">
-                    <p>{{ anotacao.autor }}</p>
-                    <p>{{ anotacao.data }}</p>
+                    <p>{{ novaAnotacao.autor }}</p>
+                    <p>{{ novaAnotacao.data }}</p>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@
                   name="modelo"
                   id="modelo3"
                   value="modelo3"
-                  [(ngModel)]="anotacao.modelo"
+                  [(ngModel)]="novaAnotacao.modelo"
                 />
               </div>
               <div class="col2">
@@ -108,11 +108,11 @@
                 <div class="card">
                   <div class="card_row" [ngClass]="larguraAnotacao()">
                     <img src="../../../../../assets/img/modelo3.png" alt="" />
-                    <p>{{ anotacao.texto }}</p>
+                    <p>{{ novaAnotacao.texto }}</p>
                   </div>
                   <div class="card_row card_row2">
-                    <p>{{ anotacao.autor }}</p>
-                    <p>{{ anotacao.data }}</p>
+                    <p>{{ novaAnotacao.autor }}</p>
+                    <p>{{ novaAnotacao.data }}</p>
                   </div>
                 </div>
               </div>
@@ -120,7 +120,9 @@
           </div>
 
           <div class="acoes">
-            <button (click)="criarAnotacao()" class="botao">salvar</button>
+            <button type="submit" (click)="criarAnotacao()" class="botao">
+              salvar
+            </button>
             <button (click)="cancelarAnotacao()" class="botao">cancelar</button>
             <button (click)="cancelarAnotacao()" routerLink="/memoteca">
               painel

@@ -12,11 +12,14 @@ import { DatabaseService } from './database.service';
   templateUrl: './painel.component.html',
   styleUrl: './painel.component.css',
 })
-export class PainelComponent {
+export class PainelComponent implements OnInit {
   listaAnotacoes: Anotacao[] = [];
 
   constructor(private dbService: DatabaseService) {}
 
+  /* método on init é executado apenas uma vez ao iniciar a execução, antes de renderizar.
+   * requer que a classe implemente a interface OnInit.
+   */
   ngOnInit(): void {
     /* ver também como implementar com signals ou effect() */
     /* o método subscribe executa função passada como argumento quando os dados estiverem disponíveis. */

@@ -1,5 +1,5 @@
 export interface Anotacao {
-  id: string;
+  id?: string;
   texto: string;
   autor: string;
   modelo: string;
