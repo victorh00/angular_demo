@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Anotacao } from '../anotacao';
 
 @Component({
   selector: 'app-card',
@@ -10,13 +11,15 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   /* notação anotacao!: define 'assignment assertion' */
-  @Input() anotacao!: {
-    id: string;
-    texto: string;
-    autor: string;
-    modelo: string;
-    data: string;
-  };
+  // @Input() anotacao!: {
+  //   id: string;
+  //   texto: string;
+  //   autor: string;
+  //   modelo: string;
+  //   data: string;
+  // };
+  @Input() anotacao!: Anotacao;
+
   larguraAnotacao(): string {
     return this.anotacao.texto.length <= 50 ? 'anot_p' : 'anot_g';
   }

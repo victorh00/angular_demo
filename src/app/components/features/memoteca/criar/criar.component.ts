@@ -2,6 +2,7 @@ import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Anotacao } from '../anotacao';
 
 @Component({
   selector: 'app-criar',
@@ -11,7 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './criar.component.css',
 })
 export class CriarComponent {
-  anotacao = {
+  anotacao: Anotacao = {
     id: '1',
     texto: 'texto de exemplo',
     autor: 'machado',
