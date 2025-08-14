@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Anotacao } from '../anotacao';
-import { DatabaseService } from '../painel/database.service';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-criar',
@@ -22,7 +22,7 @@ export class CriarComponent {
     data: new Date().toISOString().split('T')[0],
   };
   criarAnotacao() {
-    this.dbService.create(this.novaAnotacao).subscribe(() => {
+    this.dbService.criar(this.novaAnotacao).subscribe(() => {
       alert('nova anotacao criada!');
       this.router.navigate(['/memoteca']);
     });

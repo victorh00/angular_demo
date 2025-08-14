@@ -2,7 +2,11 @@
   <div class="content">
     <div class="painel" *ngIf="listaAnotacoes.length > 0; else listaVazia">
       <div class="painel_item" *ngFor="let item of listaAnotacoes">
-        <app-card [anotacao]="item"></app-card>
+        <app-card
+          [anotacao]="item"
+          (anotacaoEditada)="atualizarPainel()"
+          (anotacaoExcluida)="atualizarPainel()"
+        ></app-card>
       </div>
     </div>
     <div class="botoes">

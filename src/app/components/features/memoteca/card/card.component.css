@@ -25,6 +25,15 @@
 .card_row2 {
   background-color: var(--color-dark-2);
 }
+.card_button {
+  padding: 3px;
+}
+.card_edit {
+  background-color: blue;
+}
+.card_delete {
+  background-color: red;
+}
 .anot_p {
   width: 10rem;
 }

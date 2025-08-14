@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 import { Anotacao } from '../anotacao';
-import { DatabaseService } from './database.service';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-painel',
@@ -23,7 +23,10 @@ export class PainelComponent implements OnInit {
   ngOnInit(): void {
     /* ver também como implementar com signals ou effect() */
     /* o método subscribe executa função passada como argumento quando os dados estiverem disponíveis. */
-    this.dbService.read().subscribe((listaRecebida) => {
+    this.atualizarPainel();
+  }
+  atualizarPainel(): void {
+    this.dbService.buscar().subscribe((listaRecebida) => {
       this.listaAnotacoes = listaRecebida;
     });
   }
