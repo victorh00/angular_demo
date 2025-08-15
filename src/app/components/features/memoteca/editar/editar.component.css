@@ -11,8 +11,7 @@
 }
 .content {
   padding: 2rem 3rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0rem;
   overflow: auto;
   background-color: var(--color-dark-0);
   height: auto;
@@ -102,6 +101,7 @@ h2 {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: space-around;
 }
 .acoes button {
