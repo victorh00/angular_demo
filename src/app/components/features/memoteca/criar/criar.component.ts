@@ -21,13 +21,13 @@ export class CriarComponent {
     modelo: 'modelo2',
     data: new Date().toISOString().split('T')[0],
   };
-  criarAnotacao() {
+  criarAnotacao(): void {
     this.dbService.criar(this.novaAnotacao).subscribe(() => {
       alert('nova anotacao criada!');
       this.router.navigate(['/memoteca/painel']);
     });
   }
-  cancelarAnotacao() {
+  cancelarAnotacao(): void {
     alert('anotação cancelada. campos reiniciados.');
     this.novaAnotacao.autor = 'clarice lispector';
     this.novaAnotacao.data = new Date().toISOString().split('T')[0];

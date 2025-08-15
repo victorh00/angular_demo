@@ -11,7 +11,9 @@
     <p>{{ anotacao.autor }}</p>
     <p>{{ anotacao.data }}</p>
     <div class="div_botoes">
-      <a class="card_button card_edit" (click)="editarAnotacao(anotacao)"
+      <a
+        class="card_button card_edit"
+        routerLink="/memoteca/editar/{{ anotacao.id }}"
         ><img
           src="../../../../../assets/img/edit_temp.png"
           alt=""
