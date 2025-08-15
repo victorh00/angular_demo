@@ -17,11 +17,13 @@ export class DatabaseService {
    * Faz requisição GET para o endpoint.
    * @returns `Observable` de lista de anotações <Anotacao[]>.
    */
-  buscar(): Observable<Anotacao[]> {
+  buscarTodos(): Observable<Anotacao[]> {
     return this.http.get<Anotacao[]>(this.API);
   }
 
-  buscarPorID() {}
+  buscarPorID(id: number): Observable<Anotacao> {
+    return this.http.get<Anotacao>(`${this.API}/${id}`)
+  }
 
   /**
    * Faz requisição POST para o endpoint.
@@ -32,12 +34,12 @@ export class DatabaseService {
     return this.http.post<Anotacao>(this.API, anotacao);
   }
 
-  editar(id: number, anotacao: Anotacao): Observable<Anotacao> {
-    const url = `${this.API}/${id}`;
-    return this.http.put<Anotacao>(url, anotacao); //placeholderrr
+  editar(anotacao: Anotacao): Observable<Anotacao> {
+    const url = `${this.API}/${anotacao.id}`;
+    return this.http.put<Anotacao>(url, anotacao);
   }
 
-  remover(id: number): Observable<Anotacao> {
+  deletar(id: number): Observable<Anotacao> {
     const url = `${this.API}/${id}`;
     return this.http.delete<Anotacao>(url);
   }

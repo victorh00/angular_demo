@@ -8,11 +8,11 @@
     <p>{{ anotacao.data }}</p>
     <button
       class="card_button card_edit"
-      (click)="editarAnotacao(anotacao.id!)"
+      (click)="editarAnotacao(anotacao)"
     ></button>
     <button
       class="card_button card_delete"
-      (click)="excluirAnotacao(anotacao.id!)"
+      routerLink="/excluir/{{anotacao.id}}"
     ></button>
   </div>
 </div>

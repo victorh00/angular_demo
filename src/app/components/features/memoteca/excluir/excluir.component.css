@@ -1,0 +1,41 @@
+.excluir_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: var(--color-dark-1);
+  color: var(--color-neutral-1);
+}
+.content {
+  padding: 2rem 3rem;
+  margin: 2rem 0rem;
+  overflow: auto;
+  background-color: var(--color-dark-0);
+  height: 70%;
+  width: 50%;
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+}
+h2 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-1);
+}
+.div_botoes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+.botao {
+    padding: 1rem;
+    background-color: var(--color-dark-1);
+}
+.botao_excluir {
+    border: 1px solid var(--color-1);
+    color: var(--color-1);
+}

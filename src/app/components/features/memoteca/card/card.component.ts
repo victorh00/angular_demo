@@ -2,12 +2,12 @@ import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Anotacao } from '../anotacao';
 import { DatabaseService } from '../services/database.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, RouterLink],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
@@ -33,16 +33,10 @@ export class CardComponent {
   /* componente filho "card" emite evento para componente pai "painel",
    * executando ação de atualização quando o evento é escutado.
    */
-  editarAnotacao(id: number, anotacao: Anotacao) {
-    this.dbService.editar(id, anotacao).subscribe(() => {
-      alert(`card número ${id} atualizado!`);
-      this.anotacaoEditada.emit(id);
-    });
-  }
-  excluirAnotacao(id: number) {
-    this.dbService.remover(id).subscribe(() => {
-      alert(`card número ${id} excluído!`);
-      this.anotacaoExcluida.emit(id);
+  editarAnotacao(anotacao: Anotacao) {
+    this.dbService.editar(anotacao).subscribe(() => {
+      alert(`card número ${anotacao.id} atualizado!`);
+      this.anotacaoEditada.emit(anotacao.id);
     });
   }
 }

@@ -7,6 +7,8 @@ import { HomeComponent } from './components/core/home/home.component';
 import { PainelComponent } from './components/features/memoteca/painel/painel.component';
 import { CriarComponent } from './components/features/memoteca/criar/criar.component';
 import { MemotecaComponent } from './components/features/memoteca/memoteca/memoteca.component';
+import { ExcluirComponent } from './components/features/memoteca/excluir/excluir.component';
+import { EditarComponent } from './components/features/memoteca/editar/editar.component';
 
 export const routes: Routes = [
   {
@@ -44,10 +46,30 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: PainelComponent,
+        children: [
+          {
+            path: 'excluir/:id',
+            component: ExcluirComponent,
+          },
+          {
+            path: 'editar/:id',
+            component: EditarComponent,
+          },
+        ]
       },
       {
         path: 'painel',
         component: PainelComponent,
+        children: [
+          {
+            path: 'excluir/:id',
+            component: ExcluirComponent,
+          },
+          {
+            path: 'editar/:id',
+            component: EditarComponent,
+          },
+        ]
       },
       {
         path: 'criar',

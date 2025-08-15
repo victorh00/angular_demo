@@ -26,7 +26,7 @@ export class PainelComponent implements OnInit {
     this.atualizarPainel();
   }
   atualizarPainel(): void {
-    this.dbService.buscar().subscribe((listaRecebida) => {
+    this.dbService.buscarTodos().subscribe((listaRecebida) => {
       this.listaAnotacoes = listaRecebida;
     });
   }

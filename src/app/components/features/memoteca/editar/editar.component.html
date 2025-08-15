@@ -1,0 +1,140 @@
+<section class="criar_section">
+  <div class="content">
+    <h2 class="form_header">criar anotação</h2>
+    <form action="">
+      <div class="form_fields">
+        <div class="field1">
+          <label for="autor">autor</label>
+          <input
+            class="text_input"
+            maxlength="20"
+            type="text"
+            id="autor"
+            name="autor"
+            [(ngModel)]="anotacao.autor"
+          />
+        </div>
+
+        <div class="field1">
+          <label for="texto">texto</label>
+          <input
+            class="text_input"
+            maxlength="100"
+            type="text"
+            id="texto"
+            name="texto"
+            [(ngModel)]="anotacao.texto"
+          />
+        </div>
+
+        <div class="field1">
+          <label for="data">data</label>
+          <input
+            class="date_input"
+            type="date"
+            id="data"
+            name="data"
+            [(ngModel)]="anotacao.data"
+          />
+        </div>
+
+        <div class="field1">
+          <label for="modelo">selecione o modelo</label>
+
+          <div class="modelo_3opcoes">
+            <label class="modelo_1opcao" for="modelo1">
+              <div class="col1">
+                <input
+                  type="radio"
+                  name="modelo"
+                  id="modelo1"
+                  value="modelo1"
+                  [(ngModel)]="anotacao.modelo"
+                />
+              </div>
+              <div class="col2">
+                <p class="tipo_modelo">lembrete</p>
+                <div class="card">
+                  <div class="card_row" [ngClass]="larguraAnotacao()">
+                    <img src="../../../../../assets/img/modelo1.png" alt="" />
+                    <p>{{ anotacao.texto }}</p>
+                  </div>
+                  <div class="card_row card_row2">
+                    <p>{{ anotacao.autor }}</p>
+                    <p>{{ anotacao.data }}</p>
+                    <button class="card_button card_edit"></button>
+                    <button class="card_button card_delete"></button>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+            <label class="modelo_1opcao" for="modelo2">
+              <div class="col1">
+                <input
+                  type="radio"
+                  name="modelo"
+                  id="modelo2"
+                  value="modelo2"
+                  [(ngModel)]="anotacao.modelo"
+                />
+              </div>
+
+              <div class="col2">
+                <p class="tipo_modelo">ideia</p>
+                <div class="card">
+                  <div class="card_row" [ngClass]="larguraAnotacao()">
+                    <img src="../../../../../assets/img/modelo2.png" alt="" />
+                    <p>{{ anotacao.texto }}</p>
+                  </div>
+                  <div class="card_row card_row2">
+                    <p>{{ anotacao.autor }}</p>
+                    <p>{{ anotacao.data }}</p>
+                    <button class="card_button card_edit"></button>
+                    <button class="card_button card_delete"></button>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+            <label class="modelo_1opcao" for="modelo3">
+              <div class="col1">
+                <input
+                  type="radio"
+                  name="modelo"
+                  id="modelo3"
+                  value="modelo3"
+                  [(ngModel)]="anotacao.modelo"
+                />
+              </div>
+              <div class="col2">
+                <p class="tipo_modelo">alerta</p>
+                <div class="card">
+                  <div class="card_row" [ngClass]="larguraAnotacao()">
+                    <img src="../../../../../assets/img/modelo3.png" alt="" />
+                    <p>{{ anotacao.texto }}</p>
+                  </div>
+                  <div class="card_row card_row2">
+                    <p>{{ anotacao.autor }}</p>
+                    <p>{{ anotacao.data }}</p>
+                    <button class="card_button card_edit"></button>
+                    <button class="card_button card_delete"></button>
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="acoes">
+            <button type="submit" class="botao">
+              salvar
+            </button>
+            <button routerLink="/memoteca">
+              painel
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
