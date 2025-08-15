@@ -8,12 +8,12 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './excluir.component.html',
-  styleUrl: './excluir.component.css'
+  styleUrl: './excluir.component.css',
 })
 export class ExcluirComponent implements OnInit {
   constructor(
-    private dbDatabase: DatabaseService, 
-    private router: Router, 
+    private dbDatabase: DatabaseService,
+    private router: Router,
     private route: ActivatedRoute
   ) {}
   anotacao!: Anotacao;
@@ -21,10 +21,11 @@ export class ExcluirComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.dbDatabase.buscarPorID(parseInt(id!)).subscribe((anotacao) => {
       this.anotacao = anotacao;
+      console.log(anotacao);
     });
   }
   excluirAnotacao(anotacao: Anotacao): void {
-    this.dbDatabase.deletar(anotacao.id!).subscribe(()=>{
+    this.dbDatabase.deletar(anotacao.id!).subscribe(() => {
       alert(`anotação ${anotacao.id} excluída!`);
       this.router.navigate(['/memoteca']);
     });

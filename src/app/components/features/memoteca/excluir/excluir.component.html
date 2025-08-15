@@ -1,12 +1,14 @@
 <section class="excluir_section">
-<div class="content">
+  <div class="content">
     <h2>excluir anotação</h2>
-    <div class="div_texto">
-        <p class="texto">deseja excluir a anotação?</p>
-    </div>
+    <p>deseja excluir a anotação?</p>
     <div class="div_botoes">
-        <button class="botao botao_excluir" routerLink="/memoteca/excluir/{{anotacao.id}}">excluir</button>
-        <button class="botao botao_cancelar" routerLink="/memoteca">cancelar</button>
+      <button class="botao botao_excluir" (click)="excluirAnotacao(anotacao)">
+        excluir
+      </button>
+      <button class="botao botao_cancelar" routerLink="/memoteca">
+        cancelar
+      </button>
     </div>
-</div>
+  </div>
 </section>

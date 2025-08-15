@@ -10,15 +10,14 @@
   color: var(--color-neutral-1);
 }
 .content {
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
   margin: 2rem 0rem;
   overflow: auto;
   background-color: var(--color-dark-0);
-  height: 70%;
-  width: 50%;
   border-radius: 20px;
   font-family: var(--font-body);
   font-size: 0.8rem;
+  text-align: center;
 }
 h2 {
   font-family: var(--font-title);
@@ -27,15 +26,19 @@ h2 {
   color: var(--color-1);
 }
 .div_botoes {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 .botao {
-    padding: 1rem;
-    background-color: var(--color-dark-1);
+  padding: 0.5rem 1rem;
+  margin: 0rem 0.5rem;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  background-color: var(--color-dark-2);
+  color: var(--color-neutral-1);
+  cursor: pointer;
 }
 .botao_excluir {
-    border: 1px solid var(--color-1);
-    color: var(--color-1);
+  border: 1px solid var(--color-1);
+  color: var(--color-1);
 }

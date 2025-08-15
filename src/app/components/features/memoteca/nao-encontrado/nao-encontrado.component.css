@@ -10,12 +10,10 @@
   color: var(--color-neutral-1);
 }
 .content {
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
   margin: 2rem 0rem;
   overflow: auto;
   background-color: var(--color-dark-0);
-  height: auto;
-  width: 40%;
   border-radius: 20px;
   font-family: var(--font-body);
   font-size: 0.8rem;

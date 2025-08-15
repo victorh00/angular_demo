@@ -24,7 +24,7 @@ export class CriarComponent {
   criarAnotacao() {
     this.dbService.criar(this.novaAnotacao).subscribe(() => {
       alert('nova anotacao criada!');
-      this.router.navigate(['/memoteca']);
+      this.router.navigate(['/memoteca/painel']);
     });
   }
   cancelarAnotacao() {

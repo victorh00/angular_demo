@@ -49,10 +49,6 @@ export const routes: Routes = [
         redirectTo: 'painel',
       },
       {
-        path: '**',
-        component: NaoEncontradoComponent,
-      },
-      {
         path: 'painel',
         component: PainelComponent,
       },
@@ -68,16 +64,11 @@ export const routes: Routes = [
         path: 'editar/:id',
         component: EditarComponent,
       },
+      {
+        path: '**',
+        pathMatch: 'full',
+        component: NaoEncontradoComponent,
+      },
     ],
   },
-  // { path: '**', component: NotFound }
 ];
-
-/*
-memoteca
-  painelComponent: home. if empty, msg='sem post-its'. botão criar post-it.
-  criarComponent: form
-
-
-
-*/
