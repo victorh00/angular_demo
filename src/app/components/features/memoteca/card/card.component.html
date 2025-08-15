@@ -1,11 +1,38 @@
 <div class="card">
-  <div class="card_row" [ngClass]="larguraAnotacao()">
-    <img src="../../../../../assets/img/{{ anotacao.modelo }}.png" alt="" />
+  <div class="card_row1" [ngClass]="larguraAnotacao()">
+    <img
+      class="icone_modelo"
+      src="../../../../../assets/img/{{ anotacao.modelo }}.png"
+      alt=""
+    />
     <p>{{ anotacao.texto }}</p>
   </div>
-  <div class="card_row card_row2">
+  <div class="card_row2">
     <p>{{ anotacao.autor }}</p>
     <p>{{ anotacao.data }}</p>
+    <div class="div_botoes">
+      <a class="card_button card_edit" (click)="editarAnotacao(anotacao)"
+        ><img
+          src="../../../../../assets/img/edit_temp.png"
+          alt=""
+          class="icone_botao"
+      /></a>
+      <a
+        class="card_button card_delete"
+        routerLink="/memoteca/excluir/{{ anotacao.id }}"
+        ><img
+          src="../../../../../assets/img/delete_temp.png"
+          alt=""
+          class="icone_botao"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<!-- 
+
+botões de editar e deletar placeholder dentro de card_row2: 
+
     <button
       class="card_button card_edit"
       (click)="editarAnotacao(anotacao)"
@@ -13,6 +40,6 @@
     <button
       class="card_button card_delete"
       routerLink="/memoteca/excluir/{{ anotacao.id }}"
-    ></button>
-  </div>
-</div>
+    ></button> 
+
+    -->

@@ -6,33 +6,36 @@
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  padding: 0.5rem;
-  border: 1px solid var(--color-1);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0.15rem 0.15rem 0.15rem var(--color-1);
+  border: 1px solid var(--color-dark-2);
 }
-.card img {
+.icone_modelo {
   height: 1.3rem;
   background-color: var(--color-1);
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
 }
-.card_row {
+.card_row1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
 .card_row2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--color-dark-2);
 }
 .card_button {
   padding: 3px;
 }
-.card_edit {
-  background-color: blue;
-}
-.card_delete {
-  background-color: red;
+.icone_botao {
+  height: 1rem;
 }
 .anot_p {
   width: 10rem;
