@@ -9,6 +9,7 @@ import { CriarComponent } from './components/features/memoteca/criar/criar.compo
 import { MemotecaComponent } from './components/features/memoteca/memoteca/memoteca.component';
 import { ExcluirComponent } from './components/features/memoteca/excluir/excluir.component';
 import { EditarComponent } from './components/features/memoteca/editar/editar.component';
+import { NaoEncontradoComponent } from './components/features/memoteca/nao-encontrado/nao-encontrado.component';
 
 export const routes: Routes = [
   {
@@ -45,35 +46,27 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        component: PainelComponent,
-        children: [
-          {
-            path: 'excluir/:id',
-            component: ExcluirComponent,
-          },
-          {
-            path: 'editar/:id',
-            component: EditarComponent,
-          },
-        ]
+        redirectTo: 'painel',
+      },
+      {
+        path: '**',
+        component: NaoEncontradoComponent,
       },
       {
         path: 'painel',
         component: PainelComponent,
-        children: [
-          {
-            path: 'excluir/:id',
-            component: ExcluirComponent,
-          },
-          {
-            path: 'editar/:id',
-            component: EditarComponent,
-          },
-        ]
       },
       {
         path: 'criar',
         component: CriarComponent,
+      },
+      {
+        path: 'excluir/:id',
+        component: ExcluirComponent,
+      },
+      {
+        path: 'editar/:id',
+        component: EditarComponent,
       },
     ],
   },
